@@ -55,8 +55,8 @@ cancelAnimationFrame(animationFrameId);
      
 
       {/* intro */}
-        <LiquidGlass cornerRadius={32} padding={24} style={{position: 'fixed', top: "25%", left: "18%"}} overLight={true} elasticity={.25} blurAmount={.1}>
-          <h2>User Info</h2>
+        <LiquidGlass cornerRadius={32} padding={24} style={{position: 'fixed', top: "25%", left: "25%"}} overLight={true} elasticity={.25} blurAmount={.1}>
+          <h2>user info</h2>
           <div className='user-info-container'>
             <div className='flex-gap'>
 
@@ -74,33 +74,27 @@ cancelAnimationFrame(animationFrameId);
           </div>
         </LiquidGlass>
 
-      {/* history */}
-        <LiquidGlass cornerRadius={32} style={{position: 'fixed', top: "20%", left: "66%"}} overLight={true} elasticity={.25}>
-          <h2>history</h2>
-          <div className='experience-container'>
-            <ul className='history-ul'><li className='history-li'><span>comp sci @ niu</span><span>2024-present</span></li></ul>
-            <ul className='history-ul'><li className='history-li'><span>living in europe</span><span>2021-2024</span></li></ul>
-            <ul className='history-ul'><li className='history-li'><span>military</span><span>2017-2021</span></li></ul>
-          </div>
+        {/* buttons */}
+
+
+        <LiquidGlass
+        style={{position: 'fixed', top: "50%" , left: "14%", cursor: 'pointer'}} 
+          onClick={() => window.open('https://www.linkedin.com/in/jakobn', '_blank')}
+        >
+          <span>linkedin</span>
         </LiquidGlass>
 
-      {/* about */}
-        <LiquidGlass cornerRadius={32} style={{position: 'fixed', top: "70%" , left: "23%"}} elasticity={.25}>
-          <h2>About</h2>
-          <div>
-            <p>
-              Former US military member looking to relocate to Doha, Qatar.
-            </p>
-            <p>
-              Interests include: human nature, neurology, physics, aviation 
-            </p>
-
-         
-          </div>
+        {/* github */}
+        <LiquidGlass
+        style={{position: 'fixed', top: "50%" , left: "24%", cursor: 'pointer'}} 
+          onClick={() => window.open('https://github.com/jakobpl', '_blank')}
+        >
+          <span>GitHub</span>
         </LiquidGlass>
-      {/* stuff ive worked with */}
-        <LiquidGlass cornerRadius={32} style={{position: 'fixed', top: "70%" , left: "70%"}} elasticity={.25} >
-          <h4>stuff ive played with</h4>
+
+         {/* stuff ive worked with */}
+         <LiquidGlass cornerRadius={32} style={{position: 'fixed', top: "33%" , left: "70%"}} elasticity={.25} overLight={true}>
+          <h3>stuff ive played with</h3>
           <div>
             <ul className='work-ul'>
               <li>react</li>
@@ -117,21 +111,33 @@ cancelAnimationFrame(animationFrameId);
           </div>
         </LiquidGlass>
 
-{/* buttons */}
-        <LiquidGlass
-        style={{position: 'fixed', top: "50%" , left: "8%"}} 
-          onClick={() => console.log('Button clicked!')}
-        >
-          <span>linkedin</span>
+      {/* history */}
+        <LiquidGlass cornerRadius={32} style={{position: 'fixed', top: "70%", left: "21%"}}  elasticity={.25}>
+          <h3>history</h3>
+          <div className='experience-container'>
+            <ul className='history-ul'><li className='history-li'><span>comp sci @ niu</span><span>2024-present</span></li></ul>
+            <ul className='history-ul'><li className='history-li'><span>living in europe</span><span>2021-2024</span></li></ul>
+            <ul className='history-ul'><li className='history-li'><span>military</span><span>2017-2021</span></li></ul>
+          </div>
         </LiquidGlass>
 
-        {/* github */}
-        <LiquidGlass
-        style={{position: 'fixed', top: "50%" , left: "18%"}} 
-          onClick={() => console.log('Button clicked!')}
-        >
-          <span>GitHub</span>
+      {/* about */}
+        <LiquidGlass cornerRadius={32} style={{position: 'fixed', top: "80%" , left: "60%"}} elasticity={.25}>
+          <h3>about</h3>
+          <div className='about-container'>
+            <p>
+              Former US service member interested in relocating to Doha, Qatar.
+            </p>
+            <p>
+              Hobbies/interests include: human nature, neurology, physics, aviation, training hard, solving hard problems and my kittens.
+            </p>
+
+         
+          </div>
         </LiquidGlass>
+     
+
+
        
 
     </div>

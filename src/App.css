@@ -1,8 +1,4 @@
 .App {
-  
-  
-  /* backdrop-filter: blur(2px); */
-
   height: 100vh;
   width: 100vw;
 }
@@ -96,7 +92,9 @@
 .work-ul {
 display: flex;
 flex-direction: column;
-gap: 12px;
+gap: 8px;
+padding: 12px 0 0 24px;
+list-style-type:circle;
 
 }
 
@@ -107,3 +105,19 @@ gap: 12px;
   align-items: center;
   gap:24px
 }
+
+
+
+/* about */
+
+.about-container {
+  /* width: 400px; */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+/* more globals */
+
