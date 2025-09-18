@@ -8,7 +8,7 @@ function App() {
   const targetY = useRef(50);
   const currentX = useRef(50);
   const currentY = useRef(50);
-  let animationFrameId;
+  const animationFrameId = useRef(null);
 
   useEffect(() => {
 const animate = () => {
@@ -19,7 +19,7 @@ const animate = () => {
     bgRef.current.style.backgroundPosition = `${currentX.current}% ${currentY.current}%`;
   }
 
-  animationFrameId = requestAnimationFrame(animate);
+  animationFrameId.current = requestAnimationFrame(animate);
 };
 
 animate(); // Start the animation loop
@@ -41,7 +41,7 @@ targetY.current = 50 - offsetY;
 
     return () => {
 window.removeEventListener('mousemove', handleMouseMove);
-cancelAnimationFrame(animationFrameId);
+cancelAnimationFrame(animationFrameId.current);
 };
   }, []);
 
@@ -98,7 +98,7 @@ cancelAnimationFrame(animationFrameId);
           <div>
             <ul className='work-ul'>
               <li>react</li>
-              <li>c++ (~600 <a href="https://leetcode.com/u/jdnev/" target="_blank">leets</a>), python</li>
+              <li>c++ (~600 <a href="https://leetcode.com/u/jdnev/" target="_blank" rel="noreferrer">leets</a>), python</li>
               <li>node/express/mongodb</li>
               <li>google cloud</li>
               <li>ollama</li>
